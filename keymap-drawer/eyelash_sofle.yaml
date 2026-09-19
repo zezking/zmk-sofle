@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - LEFT CTRL
+  - $$mdi:apple-keyboard-control$$
   - LOWER
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -64,7 +64,7 @@ layers:
   - RAISE
   - RIGHT GUI
   - $$mdi:apple-keyboard-option$$
-  - RIGHT CTRL
+  - $$mdi:apple-keyboard-control$$
   LOWER:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
