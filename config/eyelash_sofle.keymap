@@ -94,6 +94,14 @@
         compatible = "zmk,keymap";
 
         layer0 {
+            // NOTE: The Eyelash Sofle hardware physically transposes the LEFT thumb
+            // cluster's binding slots 3/4 (verified via macOS Keyboard Viewer).
+            // So the bindings below are deliberately ordered LCTRL, LEFT_GUI,
+            // LEFT_ALT — which lands physically as Ctrl, Opt, Cmd (Mac modifier
+            // order, outer→inner). Do NOT "fix" this order; swapping the GUI/ALT
+            // bindings back would put Command and Option in the wrong spots.
+            // See commit 791e271 and boards/shields/eyelash_sofle/
+            // eyelash_sofle-layouts.dtsi (drawing positions corrected to match).
             bindings = <
 &kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp GRAVE
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BACKSPACE

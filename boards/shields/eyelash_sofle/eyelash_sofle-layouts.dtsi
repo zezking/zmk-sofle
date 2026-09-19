@@ -60,8 +60,9 @@
             , <&key_physical_attrs 100 100 1550  350       0     0     0>
             , <&key_physical_attrs 100 100  650  338       0     0     0>
             , <&key_physical_attrs 100 100  200  412       0     0     0>
+            , <&key_physical_attrs 100 100  400  412       0     0     0>  /* slot 54: Eyelash left thumb transposes slots 3/4 vs this dtsi's original order —
+                                                                             positions swapped so drawings show physical truth (see keymap comment) */
             , <&key_physical_attrs 100 100  300  400       0     0     0>
-            , <&key_physical_attrs 100 100  400  412       0     0     0>
             , <&key_physical_attrs 100 100  550  412    3000   500   412>
             , <&key_physical_attrs 100 100  675  362    3000   500   412>
             , <&key_physical_attrs 100 100  775  112       0     0     0>
