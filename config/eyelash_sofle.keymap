@@ -125,7 +125,7 @@
 &trans  &kp INSERT &kp PSCRN  &kp K_CMENU &trans    &trans    &mmv MOVE_DOWN   &kp PG_UP   &kp LA(LEFT)   &kp UP   &kp LA(RIGHT)  &kp LC(BACKSPACE)  &kp BACKSPACE
 &trans  &kp LEFT_ALT &kp LCTRL &kp LSHFT &trans    &kp CLCK  &mmv MOVE_LEFT   &kp PG_DN   &kp LEFT       &kp DOWN &kp RIGHT      &kp DELETE         &kp BACKSPACE
 &trans  &kp K_UNDO &kp K_CUT  &kp K_COPY  &kp K_PASTE &trans  &mmv MOVE_RIGHT  &trans      &kp LG(LEFT)   &trans   &kp LG(RIGHT)  &trans             &trans
-&trans  &trans    &trans     &trans      &trans    &trans    &mkp LCLK        &trans      &trans         &kp GLOBE &trans        &trans             &trans
+&trans  &trans    &trans     &trans      &trans    &trans    &mkp LCLK        &trans      &trans         &kp GLOBE &trans        &trans
             >;
 
             display-name = "RAISE";
