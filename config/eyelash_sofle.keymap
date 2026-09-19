@@ -103,11 +103,22 @@
             // See commit 791e271 and boards/shields/eyelash_sofle/
             // eyelash_sofle-layouts.dtsi (drawing positions corrected to match).
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp GRAVE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BACKSPACE
-&kp LCTRL   &kp A     &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RIGHT_SHIFT
-&kp C_MUTE  &kp LCTRL      &kp LEFT_GUI   &kp LEFT_ALT  &mo 1   &kp ENTER    &kp ENTER        &kp SPACE  &mo 2      &kp RIGHT_GUI  &kp RIGHT_ALT    &kp RCTRL
+//    ┌──────┬──────┬──────┬──────┬──────┬─────┬──────┬─────┬─────┬──────┬──────┬──────┬──────┐
+//    │ esc  │  1   │  2   │  3   │  4   │  5  │  up  │  6  │  7  │  8   │  9   │  0   │  `   │
+//    ├──────┼──────┼──────┼──────┼──────┼─────┼──────┼─────┼─────┼──────┼──────┼──────┼──────┤
+//    │ tab  │  Q   │  W   │  E   │  R   │  T  │ down │  Y  │  U  │  I   │  O   │  P   │ bspc │
+//    ├──────┼──────┼──────┼──────┼──────┼─────┼──────┼─────┼─────┼──────┼──────┼──────┼──────┤
+//    │ lctl │  A   │  S   │  D   │  F   │  G  │ left │  H  │  J  │  K   │  L   │  ;   │  '   │
+//    ├──────┼──────┼──────┼──────┼──────┼─────┼──────┼─────┼─────┼──────┼──────┼──────┼──────┤
+//    │ lsft │  Z   │  X   │  C   │  V   │  B  │ rght │  N  │  M  │  ,   │  .   │  /   │ rsft │
+//    ├──────┼──────┼──────┼──────┼──────┼─────┼──────┼─────┼─────┼──────┼──────┼──────┼──────┤
+//    │ mute │ lctl │ lgui │ lalt │ mo 1 │ ent │      │ ent │ spc │ mo 2 │ rgui │ ralt │ rctl │
+//    └──────┴──────┴──────┴──────┴──────┴─────┘      └─────┴─────┴──────┴──────┴──────┴──────┘
+  &kp ESC      &kp N1      &kp N2         &kp N3         &kp N4   &kp N5      &kp UP_ARROW      &kp N6      &kp N7      &kp N8      &kp N9          &kp N0          &kp GRAVE
+  &kp TAB      &kp Q       &kp W          &kp E          &kp R    &kp T       &kp DOWN_ARROW    &kp Y       &kp U       &kp I       &kp O           &kp P           &kp BACKSPACE
+  &kp LCTRL    &kp A       &kp S          &kp D          &kp F    &kp G       &kp LEFT_ARROW    &kp H       &kp J       &kp K       &kp L           &kp SEMI        &kp APOS
+  &kp LSHFT    &kp Z       &kp X          &kp C          &kp V    &kp B       &kp RIGHT_ARROW   &kp N       &kp M       &kp COMMA   &kp DOT         &kp FSLH        &kp RIGHT_SHIFT
+  &kp C_MUTE   &kp LCTRL   &kp LEFT_GUI   &kp LEFT_ALT   &mo 1    &kp ENTER                     &kp ENTER   &kp SPACE   &mo 2       &kp RIGHT_GUI   &kp RIGHT_ALT   &kp RCTRL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -116,11 +127,22 @@
 
         layer_1 {
             bindings = <
-&trans      &kp F1    &kp F2          &kp F3          &kp F4          &kp F5          &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9      &kp F10    &kp F11
-&kp GRAVE   &kp N1    &kp N2          &kp N3          &kp N4          &kp N5          &mmv MOVE_DOWN   &kp N6           &kp N7           &kp N8           &kp N9      &kp N0     &kp F12
-&trans      &kp EXCL  &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &mmv MOVE_LEFT   &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR    &kp RPAR   &kp PIPE
-&trans      &kp EQUAL &kp MINUS       &kp PLUS        &kp LBRC        &kp RBRC        &mmv MOVE_RIGHT  &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SEMI        &kp COLON   &kp BSLH   &trans
-&trans      &trans    &trans          &trans          &trans          &trans          &mkp LCLK        &trans           &trans           &trans           &trans      &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┬────────────────┬──────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │ f1  │ f2  │ f3  │ f4  │ f5  │  &mmv MOVE_up  │  f6  │ f7  │ f8  │ f9  │ f10 │ f11 │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼────────────────┼──────┼─────┼─────┼─────┼─────┼─────┤
+//    │  `  │  1  │  2  │  3  │  4  │  5  │ &mmv MOVE_down │  6   │  7  │  8  │  9  │  0  │ f12 │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼────────────────┼──────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  !  │  @  │  #  │  $  │  %  │ &mmv MOVE_left │  ^   │  &  │  *  │  (  │  )  │  |  │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼────────────────┼──────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  =  │  -  │  +  │  {  │  }  │ &mmv MOVE_rght │  [   │  ]  │  ;  │  :  │  \  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼────────────────┼──────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │                │ lclk │     │     │     │     │     │
+//    └─────┴─────┴─────┴─────┴─────┴─────┘                └──────┴─────┴─────┴─────┴─────┴─────┘
+  &trans      &kp F1      &kp F2      &kp F3     &kp F4     &kp F5      &mmv MOVE_UP      &kp F6             &kp F7              &kp F8      &kp F9      &kp F10    &kp F11
+  &kp GRAVE   &kp N1      &kp N2      &kp N3     &kp N4     &kp N5      &mmv MOVE_DOWN    &kp N6             &kp N7              &kp N8      &kp N9      &kp N0     &kp F12
+  &trans      &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT   &mmv MOVE_LEFT    &kp CARET          &kp AMPS            &kp ASTRK   &kp LPAR    &kp RPAR   &kp PIPE
+  &trans      &kp EQUAL   &kp MINUS   &kp PLUS   &kp LBRC   &kp RBRC    &mmv MOVE_RIGHT   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp SEMI    &kp COLON   &kp BSLH   &trans
+  &trans      &trans      &trans      &trans     &trans     &trans                        &mkp LCLK          &trans              &trans      &trans      &trans     &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -129,11 +151,22 @@
 
         layer_2 {
             bindings = <
-&trans  &trans    &trans     &trans      &trans    &trans    &mmv MOVE_UP     &trans      &trans         &trans   &trans         &trans             &trans
-&trans  &kp INSERT &kp PSCRN  &kp K_CMENU &trans    &trans    &mmv MOVE_DOWN   &kp PG_UP   &kp LA(LEFT)   &kp UP   &kp LA(RIGHT)  &kp LC(BACKSPACE)  &kp BACKSPACE
-&trans  &kp LEFT_ALT &kp LCTRL &kp LSHFT &trans    &kp CLCK  &mmv MOVE_LEFT   &kp PG_DN   &kp LEFT       &kp DOWN &kp RIGHT      &kp DELETE         &kp BACKSPACE
-&trans  &kp K_UNDO &kp K_CUT  &kp K_COPY  &kp K_PASTE &trans  &mmv MOVE_RIGHT  &trans      &kp LG(LEFT)   &trans   &kp LG(RIGHT)  &trans             &trans
-&trans  &trans    &trans     &trans      &trans    &trans    &mkp LCLK        &trans      &trans         &kp GLOBE &trans        &trans
+//    ┌─────┬──────┬──────┬──────┬─────────┬──────┬────────────────┬──────┬────────────┬──────┬────────────┬────────────┬──────┐
+//    │     │      │      │      │         │      │  &mmv MOVE_up  │      │            │      │            │            │      │
+//    ├─────┼──────┼──────┼──────┼─────────┼──────┼────────────────┼──────┼────────────┼──────┼────────────┼────────────┼──────┤
+//    │     │ ins  │ pscr │ app  │         │      │ &mmv MOVE_down │ pgup │ lalt(left) │  up  │ lalt(rght) │ lctl(bspc) │ bspc │
+//    ├─────┼──────┼──────┼──────┼─────────┼──────┼────────────────┼──────┼────────────┼──────┼────────────┼────────────┼──────┤
+//    │     │ lalt │ lctl │ lsft │         │ caps │ &mmv MOVE_left │ pgdn │    left    │ down │    rght    │    del     │ bspc │
+//    ├─────┼──────┼──────┼──────┼─────────┼──────┼────────────────┼──────┼────────────┼──────┼────────────┼────────────┼──────┤
+//    │     │ undo │ cut  │ copy │ K_PASTE │      │ &mmv MOVE_rght │      │ lgui(left) │      │ lgui(rght) │            │      │
+//    ├─────┼──────┼──────┼──────┼─────────┼──────┼────────────────┼──────┼────────────┼──────┼────────────┼────────────┼──────┤
+//    │     │      │      │      │         │      │                │ lclk │            │      │   GLOBE    │            │      │
+//    └─────┴──────┴──────┴──────┴─────────┴──────┘                └──────┴────────────┴──────┴────────────┴────────────┴──────┘
+  &trans   &trans         &trans      &trans        &trans        &trans     &mmv MOVE_UP      &trans      &trans         &trans     &trans          &trans              &trans
+  &trans   &kp INSERT     &kp PSCRN   &kp K_CMENU   &trans        &trans     &mmv MOVE_DOWN    &kp PG_UP   &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)   &kp LC(BACKSPACE)   &kp BACKSPACE
+  &trans   &kp LEFT_ALT   &kp LCTRL   &kp LSHFT     &trans        &kp CLCK   &mmv MOVE_LEFT    &kp PG_DN   &kp LEFT       &kp DOWN   &kp RIGHT       &kp DELETE          &kp BACKSPACE
+  &trans   &kp K_UNDO     &kp K_CUT   &kp K_COPY    &kp K_PASTE   &trans     &mmv MOVE_RIGHT   &trans      &kp LG(LEFT)   &trans     &kp LG(RIGHT)   &trans              &trans
+  &trans   &trans         &trans      &trans        &trans        &trans                       &mkp LCLK   &trans         &trans     &kp GLOBE       &trans              &trans
             >;
 
             display-name = "RAISE";
@@ -142,11 +175,22 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_USB   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_BLE   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &trans          &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL &trans           &trans          &trans          &trans          &trans          &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+//    ┌────────────┬──────────┬──────────┬──────────┬──────────┬──────────┬─────┬─────┬────────────┬───────────┬──────┬─────┬─────┐
+//    │   bt_clr   │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │     │            │           │      │     │     │
+//    ├────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼─────┼─────┼────────────┼───────────┼──────┼─────┼─────┤
+//    │  out_ usb  │ ug_ tog  │ ug_ eff  │ ug_ efr  │ ug_ sp+  │ ug_ sp-  │     │     │            │           │      │     │     │
+//    ├────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼─────┼─────┼────────────┼───────────┼──────┼─────┼─────┤
+//    │  out_ ble  │ ug_ br+  │ ug_ br-  │          │          │          │     │     │            │           │      │     │     │
+//    ├────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼─────┼─────┼────────────┼───────────┼──────┼─────┼─────┤
+//    │ bt_clr_ALL │          │          │          │          │          │     │     │ &sys_reset │ &soft_off │ boot │     │     │
+//    ├────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼─────┼─────┼────────────┼───────────┼──────┼─────┼─────┤
+//    │            │          │          │          │          │          │     │     │            │           │      │     │     │
+//    └────────────┴──────────┴──────────┴──────────┴──────────┴──────────┘     └─────┴────────────┴───────────┴──────┴─────┴─────┘
+  &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4      &trans   &trans   &trans       &trans      &trans        &trans   &trans
+  &out OUT_USB     &rgb_ug RGB_TOG   &rgb_ug RGB_EFF   &rgb_ug RGB_EFR   &rgb_ug RGB_SPI   &rgb_ug RGB_SPD   &trans   &trans   &trans       &trans      &trans        &trans   &trans
+  &out OUT_BLE     &rgb_ug RGB_BRI   &rgb_ug RGB_BRD   &trans            &trans            &trans            &trans   &trans   &trans       &trans      &trans        &trans   &trans
+  &bt BT_CLR_ALL   &trans            &trans            &trans            &trans            &trans            &trans   &trans   &sys_reset   &soft_off   &bootloader   &trans   &trans
+  &trans           &trans            &trans            &trans            &trans            &trans                     &trans   &trans       &trans      &trans        &trans   &trans
             >;
 
             display-name = "ADJUST";
@@ -155,11 +199,22 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │     │     │     │     │     │     │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │     │     │     │     │     │     │     │
+//    └─────┴─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴─────┴─────┘
+  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans            &trans   &trans   &trans   &trans   &trans   &trans
             >;
 
             display-name = "LAYER4";
