@@ -3,4 +3,6 @@ zmk/
 modules/
 tools/
 .west/
+firmware/
+.DS_Store
 .omo
